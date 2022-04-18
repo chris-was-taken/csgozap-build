@@ -16,4 +16,5 @@ Cheers 🤙
 
 ![Main Page Design](https://user-images.githubusercontent.com/41648222/163893418-1bc1cc86-43d6-42ca-9bfb-026ead9c6f7a.jpg)
 
-![Coinflip Design](https://user-images.githubusercontent.com/41648222/163893436-f9b5ebae-aaba-4ed3-9f5d-5a6de4698da9.jpg)
+![Coinflip Design](https://user-images.githubusercontent.com/41648222/163894088-48c0ce56-5219-424c-b068-4e2e7930a6bc.jpg)
+
