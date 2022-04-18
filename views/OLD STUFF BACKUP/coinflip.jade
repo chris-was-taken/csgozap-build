@@ -1,0 +1,135 @@
+extends layout
+
+block content
+
+    nav#myNavbar.navbar.navbar-default.navbar-inverse.navbar-fixed-top(role='navigation')
+        // Brand and toggle get grouped for better mobile display
+        .container
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbarCollapse')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='#') Tutorial Republic
+            // Collect the nav links, forms, and other content for toggling
+            #navbarCollapse.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li.active
+                        a(href='https://www.tutorialrepublic.com', target='_blank') Home
+                    li
+                        a(href='https://www.tutorialrepublic.com/about-us.php', target='_blank') About
+                    li
+                        a(href='https://www.tutorialrepublic.com/contact-us.php', target='_blank') Contact
+    .container
+        .jumbotron
+            h1 Learn to Create Websites
+
+            ul
+                li: a(href="#{steam.link}" , target="_blank") #{steam.name}
+                li: a#giveroItemeroBackero Give Items Back
+                li: img(src="#{steam.avatar}")
+                li#test123: #{steam.id}
+
+                br
+
+                form(action="/auth/logout", method="post")
+                    input(type="submit", name="submit", value="Logout")
+
+            a#createCoinflipButton.popup-modal(href='#coinflipWindow') Create Coinflip
+            #coinflipWindow.white-popup-block.mfp-hide.popup_style
+                h1 Coinflip
+                div.coinFlipItemsContainer test
+            #coinflipperoJoineru.white-popup-block.mfp-hide.popup_style
+                h1 Coinflip Joinz
+                div.coinFlipJoinItemsContainer test
+
+            a.popup-modal.test_modal(href='#test-modal') Open modal
+            #test-modal.white-popup-block.mfp-hide.popup_style
+                h1 Tradeurl
+                p.set_tradeurl_infotext
+                    | Please set your tradeurl
+                    | You can find it here ->
+                    a(href="https://steamcommunity.com/id/me/tradeoffers/privacy#trade_offer_access_url" target="_blank") Tradelink
+                    br
+                    | Disclaimer : Make sure that your Tradeurl is correct, if you set a wrong url its your own fault and we are not reliable for losses
+                    input(type="text", name="tradeurl", id="tradeurl_popup", placeholder="Insert Tradeurl here.....")
+                p
+                    a.popup-modal-dismiss(href='#') Set
+
+
+            div.completeCoinflipContainer
+                !{steam.data}
+            div#chatWindow
+                !{steam.messages}
+            input(type="text", id="chatMessageText", placeholder="Ihre Nachricht...")
+            a#sendChatMessage Sende nachricht rofl
+            p
+                a.btn.btn-success.btn-lg(href='https://www.tutorialrepublic.com', target='_blank') Get started today
+        .row
+            .col-sm-6.col-md-4.col-lg-2
+                h2 HTML
+                p
+                    | HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.
+                p
+                    a.btn.btn-success(href='https://www.tutorialrepublic.com/html-tutorial/', target='_blank') Learn More »
+            .col-sm-6.col-md-4.col-lg-2
+                h2 CSS
+                p
+                    | CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.
+                p
+                    a.btn.btn-success(href='https://www.tutorialrepublic.com/css-tutorial/', target='_blank') Learn More »
+            .clearfix.visible-sm-block
+            .col-sm-6.col-md-4.col-lg-2
+                h2 Bootstrap
+                p
+                    | Bootstrap is a powerful front-end framework for faster and easier web development. The Bootstrap tutorial section will help you learn the techniques of Bootstrap so that you can create web your own website with much less efforts.
+                p
+                    a.btn.btn-success(href='https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/', target='_blank') Learn More »
+            .clearfix.visible-md-block
+            .col-sm-6.col-md-4.col-lg-2
+                h2 References
+                p
+                    | The references section outlines all the standard HTML tags and CSS properties along with other useful references such as color names and values, symbols and character entities, web safe fonts, language codes, HTTP messages and much more.
+                p
+                    a.btn.btn-success(href='https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/', target='_blank') Learn More »
+            .clearfix.visible-sm-block
+            .col-sm-6.col-md-4.col-lg-2
+                h2 Examples
+                p
+                    | The examples section encloses an extensive collection of examples on various topic that you can try and test yourself using online HTML editor.
+                p
+                    a.btn.btn-success(href='https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/', target='_blank') Learn More »
+            .col-sm-6.col-md-4.col-lg-2
+                h2 FAQ
+                p
+                    | The collection of Frequently Asked Questions (FAQ) provides brief answers to many common questions related to web design and development.
+                p
+                    a.btn.btn-success(href='https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/', target='_blank') Learn More »
+        hr
+        .row
+            .col-sm-12
+                footer
+                    p © Copyright 2013 Tutorial Republic
+
+
+    //ul
+      li: a(href="#{steam.link}" , target="_blank") #{steam.name}
+      li: img(src="#{steam.avatar}")
+      li: | Steam64ID = #{steam.id}
+
+    //button#gggggg lol
+
+
+    //br
+
+    //form(action="/auth/logout", method="post")
+      input(type="submit", name="submit", value="Logout")
+
+
+
+//extends basiclayout
+//h1#test123 lol
+//script(src="/clientsideJS/jquery-3.2.0.min.js")
+//script(src="/clientsideJS/coinflip.js")
+//script(src="/socket.io/socket.io.js")

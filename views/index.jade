@@ -1,0 +1,66 @@
+doctype html
+html
+    head
+        // Global Site Tag (gtag.js) - Google Analytics
+        script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-107840577-1')
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-107840577-1');
+        title="CSGOZAP.com - Login"
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='keywords', content='coinflip, gambling, csgo skins, csgo, counter-strike global offensive, cs:go, csgozap, csgozap.com')
+        meta(name='description', content='CSGO Skin Coinflip! Players deposit skins in a coinflip. Afterwards a Coin will be flipped, and the winner receives the skins.')
+        meta(name='author', content='CSGOZAP')
+        meta(property='og:title', content='CSGOZAP')
+        meta(property='og:description', content='CSGO Skin Coinflip! Players deposit skins in a coinflip. Afterwards a Coin will be flipped, and the winner receives the skins.')
+        meta(property='og:url', content='https://csgozap.com')
+        meta(property='og:site_name', content='CSGOZAP')
+        link(rel='alternate', href='https://CSGOZAP.com', hreflang='en')
+        //title CSGOZAP.com - CS:GO Coinflip
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(href='/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/css/germany.css', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:200', rel='stylesheet')
+        link(rel='shortcut icon', href='img/favicon/favicon.png', type='image/x-icon')
+        link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+        link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+        link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+        link(rel='stylesheet', href='/stylesheets/index.css')
+    body.landing-page
+        // Main Container
+        .container-fluid(id='')
+            .row
+                .col-md-12.landing-cont
+                    .signin-content
+                        section.landing-head
+                            img.img-responsive.logo(src='images/logo.png', alt='')
+                            p.landing-tagline.font-montserrat
+                                | The best upcoming
+                                br
+                                | CSGO coinflip SITE!
+                        form.landing-form(action='/auth/login',method="post")
+                            .checkbox.terms.check-age
+                                input#check-age(type='checkbox', name='check')
+                                label#btn_label(for='check-age')
+                                span
+                                    | I am over 18, and I have read and agreed with the
+                                    a(href='/toc', target='_blank')  Terms of Service.
+                                    span
+                            button.steam-btn.btn-lg.font-montserrat(type='submit') Sign in through STEAM
+                        section.landing-foot
+                            ul.landing-socmed
+                                li.facebook
+                                    a(href='https://facebook.com/csgozap',target="_blank")
+                                        img(src='images/fb-button.png', alt='')
+                                li.twitter
+                                    a(href='https://twitter.com/csgozap',target='_blank')
+                                        img(src='images/tw-button.png', alt='')
+                            p.copyright © 2017 CSGOZAP - All Rights Reserved.
+
+        script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+        script(src='../js/index.js')

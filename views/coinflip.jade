@@ -1,0 +1,376 @@
+doctype html
+html
+    head
+        // Global Site Tag (gtag.js) - Google Analytics
+        script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-107840577-1')
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-107840577-1');
+        title="CSGOZAP.com - Coinflip"
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='keywords', content='coinflip, gambling, csgo skins, csgo, counter-strike global offensive, cs:go, csgozap, csgozap.com')
+        meta(name='description', content='CSGO Skin Coinflip! Players deposit skins in a coinflip. Afterwards a Coin will be flipped, and the winner receives the skins.')
+        meta(name='author', content='CSGOZAP')
+        meta(property='og:title', content='CSGOZAP')
+        meta(property='og:description', content='CSGO Skin Coinflip! Players deposit skins in a coinflip. Afterwards a Coin will be flipped, and the winner receives the skins.')
+        meta(property='og:url', content='https://csgozap.com')
+        meta(property='og:site_name', content='CSGOZAP')
+        link(rel='alternate', href='https://CSGOZAP.com', hreflang='en')
+        //title CSGOZAP.com - CS:GO Coinflip
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='shortcut icon', href='img/favicon/favicon.png', type='image/x-icon')
+        link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+        link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+        link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+        // Template Basic Images End
+        link(href='../css/font-awesom/css/font-awesome.css', rel='stylesheet')
+        link(rel='stylesheet', media='all', href='../css/custom.css?v=1.1')
+    body
+        // BEGIN WRAPPER
+        .wrapper
+            // begin main
+            main.main
+                // begin header
+                // begin header
+                .header
+                    .header__logo
+                        a.header__logo-link(href='/')
+                            img(src='img/logo.png', alt='CSGO ZAP')
+                    //.header__logo(style='max-width: 600px; margin-top: 17px;')
+                        span Everyone who is still missing a trade/items from our site please fill in this
+                            a(href='https://goo.gl/forms/bc9bEbBRMca5Sf922',target='_blank', style='color: lightgreen;')  FORM
+                            | .
+                    .profile
+                        .profile__avatar
+                            img(src='#{steam.avatar}', alt="Gamer's avatar")
+                        a#btnToggleProfile.profile__open-btn(href='#')
+                            svg.icon.icon-chevron-down
+                                use(xlink:href='img/sprite.svg#icon-chevron-down')
+                            .profile__dropdown
+                                nav.profile__menu
+                                    a.profile__menu-link.popup-with-zoom-anim.my-mfp-zoom-in#resetTradeurl Change Tradeurl
+                                    //a.profile__menu-link#proceed__logout Log Out
+                                    a.profile__menu-link#proceed__logout Logout
+                                        form#logoutForm(action="/auth/logout", method="post")
+                    a#touch-menu(href='#')
+                        #nav-icon1
+                            span
+                            span
+                            span
+                // end header
+                // end header
+                .topbar
+                    .topbar__total
+                        .info
+                            span.info__number
+                                svg.icon.icon-amount
+                                    use(xlink:href='img/sprite.svg#icon-amount')
+                                span#headerTotalAmount #{headerValues.totalValue}
+                            span.info__caption Total Amount
+                        .info
+                            span.info__number#headerTotalItems #{headerValues.totalItems}
+                            span.info__caption Total items
+                        .info
+                            span.info__number#headerTotalGames #{headerValues.totalGames}
+                            span.info__caption Total Games
+                    .topbar__buttons
+                        a#btnToggleStats.btn.btn--transparent(href='#', role='button')
+                            span Your Stats
+                            svg.icon.icon-chevron-down
+                                use(xlink:href='img/sprite.svg#icon-chevron-down')
+                        //a.btn.btn--transmodal-viewparent.popup-with-zoom-anim.my-mfp-zoom-in.popup-with-zoom-anim.my-mfp-zoom-in(href='#modal-botcf', role='button') Bot-Coinflip ( UNDER DEVELOPMENT DO NOT USE THIS! )
+                        a.btn.btn--transmodal-viewparent.popup-with-zoom-anim.my-mfp-zoom-in.popup-with-zoom-anim.my-mfp-zoom-in(href='#modal-history', role='button') View History
+                        a#createCoinflip.btn.btn--green.popup-with-zoom-anim.my-mfp-zoom-in( role='button') Create Game
+                        // popup stats
+                        .popup-stats
+                            .stats-inner
+                                .info
+                                    span.info__number
+                                        svg.icon.icon-amount
+                                            use(xlink:href='img/sprite.svg#icon-amount')
+                                        span#userStatsWon #{yourStats.totalWon}
+                                    span.info__caption Amount Won
+                                .info
+                                    span.info__number
+                                        svg.icon.icon-amount
+                                            use(xlink:href='img/sprite.svg#icon-amount')
+                                        span#userStatsLost #{yourStats.totalLost}
+                                    span.info__caption Amount Lost
+                                .info
+                                    span.info__number
+                                        svg.icon.icon-amount
+                                            use(xlink:href='img/sprite.svg#icon-amount')
+                                        span#userStatsProfit !{yourStats.totalProfit}
+                                    span.info__caption Total Profit
+                .table-wrap.scroll-y
+                    table.table#main__table
+                        thead
+                            tr
+                                th.ceil-head__players PLAYERS
+                                th.ceil-head__items ITEMS
+                                th.ceil-head__value TOTAL VALUE
+                                th.ceil-head__status STATUS
+                                th ACTION
+                        tbody
+
+            // end main
+            // begin sidebar
+            aside#sidebar.sidebar
+                p.sidebar__online
+                    | Online:
+                    span.online__number
+                .chat
+                    // feed
+                    .chat__feed.scroll-y
+                        !{content.chatTemplates}
+                    .chat__form-wrap
+                        form.chat__form
+                            input.chat__input(type='text' spellcheck="false")
+                            button.chat__send Send
+                .sidebar__poster(style="width:99%")
+                    a(href='https://twitter.com/csgozap/status/952268834895024128', target='_blank')
+                        img(src='../img/ga_picture.png', alt='Giveaway')
+                // begin footer
+                .sidebar__footer
+                    .footer__socials
+                        a.socials__item(target='_blank' href='https://facebook.com/csgozap')
+                            svg.icon.icon-facebook
+                                use(xlink:href='img/sprite.svg#icon-facebook')
+                        a.socials__item(target='_blank' href='https://twitter.com/csgozap')
+                            svg.icon.icon-twitter
+                                use(xlink:href='img/sprite.svg#icon-twitter')
+                    nav.footer__nav
+                        //a.footer__nav-link(href='/support') Affiliates
+                        a.footer__nav-link(href='/support') Support
+                        a.footer__nav-link(href='/toc') Terms of Service
+                        a.footer__nav-link(href='/faq') FAQ
+                        a.footer__nav-link(href='/proof') Provably Fair
+                    .sidebar__footer-copy © CSGOZAP 2017. All rights reserved.
+                // end footer
+            // end sidebar
+            // MODALS
+            // start history popup
+            #modal-history.zoom-anim-dialog.mfp-hide.modal-popup
+                h3.modal__title History
+                .switch__area
+                    span.switch__text ALL COINFLIPS
+                    label.switch
+                        input#switch__button(type='checkbox')
+                        span.slider
+                    span.switch__text YOUR COINFLIPS
+                .table-wrap.scroll-y(style="height:700px")
+                    table.table
+                        thead
+                            tr
+                                th.ceil-head__players PLAYERS
+                                th.ceil-head__items ITEMS
+                                th.ceil-head__value TOTAL VALUE
+                                th.ceil-head__winner WINNER
+                        tbody#history__table
+            #modal-botcf.zoom-anim-dialog.mfp-hide.modal-popup
+                h3.modal__title Bot coinflip
+                #selectedPlayerItems
+                #selectedBotItems
+                #playerItems
+                #botItems
+                button#createBotCoinflip Create Coinflip
+                button#reloadBotItems Reload Bot Items
+                button#reloadBotItemsPlayer Reload Player Items
+                span#botItemsAmount(data-bot-amount='0') 0
+                span#botItemsValue(data-bot-value="0.00") 0.00
+                span#botItemsAmountPlayer(data-player-amount='0') 0
+                span#botItemsValuePlayer(data-player-value="0.00") 0.00
+
+            // end history popup
+            // start set-url popup
+            #modal-set-url.zoom-anim-dialog.mfp-hide.modal-popup
+                h3.modal__title Setting your Trade URL
+                .set-url__content
+                    p.set-url__paragaph
+                        | Before your able to participate in our games you have to set your Steam trade URL first. If you have problems finding it, just click
+                        a(href='https://steamcommunity.com/id/user/tradeoffers/privacy#trade_offer_access_url', target='_blank')  this
+                        | .
+                    p.set-url__paragaph
+                        | Be very careful setting your correct URL, you will be able to change it again later, but with a wrong URL you might not be able to receive your winnings.
+                    .set-url__form-wrap
+                        form.set-url__form(action='#')
+                            input.set-url__input(type='text', placeholder='Steam Trade URL')
+                            span.set-url__tick
+                                svg.icon.icon-close
+                                    use(xlink:href='img/sprite.svg#icon-close')
+                            button.set-url__submit.divDisabled(type='submit') Set Trade URL
+            // end set-url popup
+            // start join popup
+            #modal-join.zoom-anim-dialog.mfp-hide.modal-popup
+                h3.modal__title Hash: 8743b52063cd84097a65d1633f5c74f5
+                .game
+                    .game__players
+                        // player1
+                        .game__player.game__player1
+                            h4.game__player-name NumLock457
+                            .game__player-photo
+                                img(src='img/game__player1.jpg', alt='Player')
+                                span.game__coin.game__coin1
+                                    img(src='img/game__coin1.png', alt='Coin')
+                            p.game__value
+                                svg.icon.icon-amount
+                                    use(xlink:href='img/sprite.svg#icon-amount')
+                                span 105.39
+                            .game__stats
+                                span.game__items 10 Items
+                                span.game__percent 51.32%
+                        // player unknown
+                        .game__player.game__player--unknown
+                            // <h4 class="game__player-name">P4USEBRE4K </h4>
+                            .game__player-photo
+                                span ?
+                            p.game__value
+                                svg.icon.icon-amount
+                                    use(xlink:href='img/sprite.svg#icon-amount')
+                                span 101.62/132.74
+                    // game weapons
+                    .game__weapons
+                        .game__weapon1.scroll-y
+                            // new item
+                            .weapons__item
+                                .weapons__photo
+                                    img(src='img/game__weapon.png', alt='Gun')
+                                .weapons__desc
+                                    p.weapons__desc-title AWP | Dragon Lore
+                                    p Factory New
+                                    p.weapons__price
+                                        svg.icon.icon-amount
+                                            use(xlink:href='img/sprite.svg#icon-amount')
+                                        span 105.39
+                            // new item
+                            .weapons__item
+                                .weapons__photo
+                                    img(src='img/game__weapon.png', alt='Gun')
+                                .weapons__desc
+                                    p.weapons__desc-title AWP | Dragon Lore
+                                    p Factory New
+                                    p.weapons__price
+                                        svg.icon.icon-amount
+                                            use(xlink:href='img/sprite.svg#icon-amount')
+                                        span 105.39
+                            // new item
+                            .weapons__item
+                                .weapons__photo
+                                    img(src='img/game__weapon.png', alt='Gun')
+                                .weapons__desc
+                                    p.weapons__desc-title AWP | Dragon Lore
+                                    p Factory New
+                                    p.weapons__price
+                                        svg.icon.icon-amount
+                                            use(xlink:href='img/sprite.svg#icon-amount')
+                                        span 105.39
+                            // new item
+                            .weapons__item
+                                .weapons__photo
+                                    img(src='img/game__weapon.png', alt='Gun')
+                                .weapons__desc
+                                    p.weapons__desc-title AWP | Dragon Lore
+                                    p Factory New
+                                    p.weapons__price
+                                        svg.icon.icon-amount
+                                            use(xlink:href='img/sprite.svg#icon-amount')
+                                        span 105.39
+                        .game__btn-wrap
+                            a.btn.game__join-btn(href='#', role='button') Join
+            // end join popup
+            // start view popup
+            #modal-view.game-modal.zoom-anim-dialog.mfp-hide.modal-popup.scroll-y
+
+            // end view popup
+            // start create-game popup
+            #modal-create.modal-create.zoom-anim-dialog.mfp-hide.modal-popup
+                h3.modal__title Create a Coinflip Game
+                .create-block
+                    .create__stats
+                        .stats__item.stats__value
+                            span Value:
+                            svg.icon.icon-amount
+                                use(xlink:href='img/sprite.svg#icon-amount')
+                            span(data-create-value="0.00") 0.00
+                            span.value__sup Min: 0.50
+                        .stats__item  Selected:
+                            span(data-create-selected="0") 0
+                            | /15
+                        .stats__item.stats__side
+                            span Your Side:
+                            img.side__pic(src='img/coin-red.png', alt='Side 1', data-coin-selected = "true",data-coin-site="0")
+                            img.side__pic(src='img/coin-purple.png', alt='Side 2', data-coin-selected = "false",data-coin-site="1")
+                        .stats__item.create__btn-wrap
+                            a.btn.create__btn.create__btn--grey(href='#') Refresh Inventory
+                        .stats__item.create__btn-wrap#finalizeCreate
+                            a.btn.create__btn(href='#') Create Game
+                    // grid
+                    .create__grid.scroll-y
+                        span.create__info You need to refresh your inventory!
+                    .create__secret Secret:
+                        span.user__secret(data-user-secret)
+                        |  (
+                        span.generate__secret.no__select Create new one
+                        | )
+            // end create-game popup
+            // start join-game popup
+            #modal-join-game.modal-create.zoom-anim-dialog.mfp-hide.modal-popup
+                h3.modal__title(data-join-coinflip-id) Join a Coinflip Game
+                .create-block
+                    .create__stats
+                        .stats__item.stats__value
+                            span Value:
+                            svg.icon.icon-amount
+                                use(xlink:href='img/sprite.svg#icon-amount')
+                            span(data-create-value="0.00") 0.00
+                            span.value__sup#joinCorrectionValue(data-join-correction-value) 0.00
+                        .stats__item  Selected:
+                            span(data-create-selected="0") 0
+                            | /15
+                        .stats__item.stats__value
+                            //span Needed Value:
+                            svg.icon.icon-amount
+                                use(xlink:href='img/sprite.svg#icon-amount')
+                            span#neededFrom(data-needed-from) 0.00
+                            span &nbsp-&nbsp
+                            svg.icon.icon-amount
+                                use(xlink:href='img/sprite.svg#icon-amount')
+                            span#neededTo(data-needed-to) 0.00
+                        .stats__item.create__btn-wrap
+                            a.btn.create__btn.create__btn--grey(href='#') Refresh Inventory
+                        .stats__item.create__btn-wrap#finalizeJoin
+                            a.btn.create__btn(href='#') Join Game
+                    // grid
+                    .create__grid.scroll-y
+                        span.create__info You need to refresh your inventory!
+                    .create__secret Secret:
+                        span.user__secret(data-user-secret)
+                        |  (
+                        span.generate__secret.no__select Create new one
+                        | )
+            // end join-game popup
+        // END WRAPPPER
+        // BEGIN scripts
+        //script(src='js/HackTimer.min.js')
+        script(type="text/javascript").
+            function giveClientsideArr() {
+                var arr = !{clientsideArr};
+                return arr;
+            }
+            function giveHistory() {
+                var arr = !{cfHistory};
+                return arr;
+            }
+        script(src = '../js/HackTimer.min.js')
+        script(src="/socket.io/socket.io.js")
+        script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+        script(type='text/javascript', src='../js/coinflip.js')
+        script(type='text/javascript', src='js/app.js')
+        // END scripts

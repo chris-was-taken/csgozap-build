@@ -1,0 +1,119 @@
+doctype html
+html
+    head
+        // Global Site Tag (gtag.js) - Google Analytics
+        script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-107840577-1')
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-107840577-1');
+        title="CSGOZAP.com - Affiliates"
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='keywords', content='coinflip, gambling, csgo skins, csgo, counter-strike global offensive, cs:go, csgozap, csgozap.com')
+        meta(name='description', content='CSGO Skin Coinflip! Players deposit skins in a coinflip. Afterwards a Coin will be flipped, and the winner receives the skins.')
+        meta(name='author', content='CSGOZAP')
+        meta(property='og:title', content='CSGOZAP')
+        meta(property='og:description', content='CSGO Skin Coinflip! Players deposit skins in a coinflip. Afterwards a Coin will be flipped, and the winner receives the skins.')
+        meta(property='og:url', content='https://csgozap.com')
+        meta(property='og:site_name', content='CSGOZAP')
+        link(rel='alternate', href='https://CSGOZAP.com', hreflang='en')
+        //title CSGOZAP.com - CS:GO Coinflip
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(href='/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/css/germany.css', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:200', rel='stylesheet')
+        link(rel='shortcut icon', href='../img/favicon/favicon.png', type='image/x-icon')
+        link(rel='apple-touch-icon', href='../img/favicon/apple-touch-icon.png')
+        link(rel='apple-touch-icon', sizes='72x72', href='../img/favicon/apple-touch-icon-72x72.png')
+        link(rel='apple-touch-icon', sizes='114x114', href='../img/favicon/apple-touch-icon-114x114.png')
+        link(rel='stylesheet', media='all', href='../css/custom.css?v=1.1')
+    body
+        // BEGIN WRAPPER
+        .wrapper(style='height:100%;')
+            // begin main
+            main.main
+                // begin header
+                // begin header
+                .header
+                    .header__logo(style="margin: 0 auto;")
+                        a.header__logo-link(href='/')
+                            img(src='../img/logo.png', alt='CSGO ZAP')
+                // end header
+                // end header
+                .content
+                    .tabHolder
+                        .tabHead.active(data-open="affiliates") Affiliates
+                        .tabHead(data-open="minigames") Minigames
+                        .tabHead(data-open="shop") Shop
+                    .tabContent
+                .spacer#affiliates
+                    | Your Affiliate Code : #{af.code}
+                    input#customAFCode(type="text",placeholder="Change code..")
+                    button#setCustomAFCode CHANGE
+                    br
+                    | Your Affiliate Balance : #{af.coins}
+                    br
+                    | Users reffered : #{af.amount}
+                    br
+                    | Total Earnings : #{af.totalearning}
+                    br
+                    | Total Collected : #{af.collected}
+                    br
+                    | Total Refferer Bet Amount : #{af.betamount}
+                    br
+                    | Affiliate level : #{af.level}
+                    br
+                    | Enter Code for free 50 CENTS
+                    input#otherCode(type="text",placeholder="Use code...")
+                    button#useOtherCode USE
+                .spacer#minigames
+                    | Your balance : #{af.coins}
+                    br
+                    | Your bet :
+                    input#betAmount(type="number", value=0.50)
+                    br
+                    | Roll over/under
+                    input(type="radio", name="ovun", checked="checked" ,id="under")
+                    input(type="radio", name="ovun", id="over")
+                    br
+                    | Multiplier
+                    input#multiplier(type="number", value=2)
+                    br
+                    | ROLL
+                    button#placeBet Place bet
+                    br
+                    br
+                    br
+                    | Chance to win
+                    br
+                    span#winChance 45%
+                    br
+                    | Profit on win
+                    br
+                    span#winProfit 1.00
+                .spacer#shop
+                    | ITEMS
+                    br
+                    .shopItemHolder
+                    br
+                    | COST
+                    br
+                    | WITHDRAWWWWWWWWWWWW
+            // end main
+        // END WRAPPPER
+        // BEGIN scripts
+        script(type="text/javascript").
+            function giveShopInv() {
+                var arr = !{shopItems};
+                return arr;
+            }
+        script(src="/socket.io/socket.io.js")
+        script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js')
+        script(type='text/javascript', src='../js/app.js')
+        script(type='text/javascript', src='../js/affiliate.js')
+        // END scripts

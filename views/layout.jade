@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-107840577-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-107840577-1');
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='keywords', content='coinflip, gambling, csgo skins, csgo, counter-strike global offensive, cs:go, csgozap, csgozap.com')
+    meta(name='description', content='CSGO Skin Coinflip! Players deposit skins in a coinflip. Afterwards a Coin will be flipped, and the winner receives the skins.')
+    meta(name='author', content='CSGOZAP')
+    meta(property='og:title', content='CSGOZAP')
+    meta(property='og:description', content='CSGO Skin Coinflip! Players deposit skins in a coinflip. Afterwards a Coin will be flipped, and the winner receives the skins.')
+    meta(property='og:url', content='https://csgozap.com')
+    meta(property='og:site_name', content='CSGOZAP')
+    link(rel='alternate', href='https://CSGOZAP.com', hreflang='en')
+    title CSGOZAP.com - CS:GO Coinflip
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/clientsideJS/jquery-3.2.0.min.js")
+    script(src="/clientsideJS/coinflip.js")
+    link(rel="stylesheet", href="/externalResources/bootstrap/css/bootstrap.css")
+    link(rel="stylesheet", href="/externalResources/popup_framework/magnific-popup.css")
+    link(rel="stylesheet", href="/externalResources/bootstrap/css/bootstrap-theme.css")
+    script(src="/externalResources/bootstrap/js/bootstrap.js")
+    script(src="/externalResources/popup_framework/jquery.magnific-popup.js")
+    script(src="/socket.io/socket.io.js")
+
+  body
+    block content

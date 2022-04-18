@@ -1,0 +1,47 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/externalResources/remodal/remodal.css')
+    link(rel='stylesheet', href='/externalResources/remodal/remodal-default-theme.css')
+    script(src="/clientsideJS/jquery-3.2.0.min.js")
+    script(src="/externalResources/remodal/remodal.js")
+    script(src="/clientsideJS/coinflip.js")
+    script(src="https://csgozap.com/socket.io/socket.io.js")
+  body
+    .remodal-bg
+      .coinflip_area
+
+      ul
+        li: a(href="#{steam.link}" , target="_blank") #{steam.name}
+        li: img(src="#{steam.avatar}")
+        li#test123: #{steam.id}
+
+        a(href="#modal" id="gggggg") Create Coinflip
+
+        #coinflipCreateWindow
+
+        br
+
+        form(action="/auth/logout", method="post")
+          input(type="submit", name="submit", value="Logout")
+
+    .remodal(data-remodal-id='modal')
+      h1 Remodal
+      p.popupcontent
+      br
+      a(id="createCoinflipButton") Create Coinflip
+
+    .remodal(data-remodal-id='modal2')
+      h1 Remodal
+      input(type="text" id="tradelink")
+      br
+      a(id="tradeurl") Set Tradeurl
+
+
+    block content
+
+
+
+
+

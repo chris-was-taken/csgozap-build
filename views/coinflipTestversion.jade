@@ -1,0 +1,365 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+        title CSGOZAP - Coinflip
+        // Stylesheets
+        //
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
+        link(href='css/bootstrap.min.css', rel='stylesheet')
+        link(href='css/font-awesom/css/font-awesome.css', rel='stylesheet')
+        link(href='css/csgozap-magnificpopup.css', rel='stylesheet')
+        link(href='css/germany.css', rel='stylesheet')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        // NAV BAR
+        nav#main-top-nav.navbar.navbar-default.nav-bg
+            .container-fluid.navbar-container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    // change logo according to your desire .. logo size is 180 X 35
+                    a.navbar-brand(href='/')
+                        img.img-responsive.logo(src='images/logo.png', alt='')
+                    i#myBtn.fa.fa-comments-o.hidden-md.hidden-lg.pull-right(aria-hidden='true')
+                #myNavbar.collapse.navbar-collapse.center-nav
+                    ul.nav.navbar-nav
+                        li
+                            //a(href='#') Coming Soon
+                            a#giveroItemeroBackero Give Items Back
+                        li
+                            a(href='/coinflip') Coinflip
+                        li
+                            a(href='#') Coming Soon
+                    // dropdown
+                    ul.nav.navbar-nav.navbar-right
+                        li.dropdown
+                            a.dropdown-toggle(data-toggle='dropdown', href='#')
+                                span.caret
+                                |    #{steam.name}
+                            ul.dropdown-menu
+                                li
+                                    a#resetTradeurl Change Tradeurl
+                                li
+                                    a#logout Logout
+                                    form#logoutForm(action="/auth/logout", method="post")
+                                //li
+                                    //form(action="/auth/logout", method="post")
+                                        //input(type="submit", name="submit", value="Logout")
+                                        //a(href='#' onclick='this.parentNode.submit(); return false;') Logout
+                        li
+                            img.img-responsive.user-profile(src='#{steam.avatar}', alt='')
+        // Main Container
+        #main-container.container-fluid.fix-top.main-container
+            .row.no-gutter-9
+                // Activity Left Panel
+                .col-xs-12.col-sm-12.col-md-9.left-content-panel.amount
+                    // Stats Container
+                    #totalStats.total-stats
+                        .row
+                            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                                h4 Total Amount
+                                span.t1
+                                    i.fa.fa-usd(aria-hidden='true')
+                                    span#totalAmount #{headerValues.totalValue}
+                            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                                h4 Total Items
+                                span.t1
+                                    i.fa.fa-tags(aria-hidden='true')
+                                    span#totalItems #{headerValues.totalItems}
+                                .btn.btn-primary.coinflip-btn.create-coinflip-button(data-effect='mfp-zoom-in') Create Coinflip
+                                .your-stats-link
+                                    span
+                                        i#drop.fa.fa-angle-down.rotate(aria-hidden='true')
+                                        | 									Your Stats
+                            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                                h4 Total Games
+                                span.t1
+                                    i.fa.fa-gamepad(aria-hidden='true')
+                                    span#totalGames #{headerValues.totalGames}
+                    #yourStats.your-stats
+                        .row
+                            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                                h4 Total Amount Won
+                                span.t1
+                                    i.fa.fa-usd(aria-hidden='true')
+                                    | #{yourStats.totalWon}
+                            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                                h4 Total Amount Lost
+                                span.t1
+                                    i.fa.fa-usd(aria-hidden='true')
+                                    | #{yourStats.totalLost}
+                            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                                h4 Total Profit
+                                span.t1
+                                    i.fa.fa-usd(aria-hidden='true')
+                                    | !{yourStats.totalProfit}
+                    // END Stats Container
+                    // Activity Container
+                    #activityCont.activity-cont
+                        !{content.coinflipTemplates}
+                        // END One Activity Block
+                    // END Activity Container
+                // END Activity Left Panel
+                // Right Panel
+                .hidden-xs.hidden-sm.col-md-3.chat.right-chat-panel
+                    // Chat Container
+                    #chatWrap.chat-wrap
+                        p.online-user
+                            | Online User:
+                            span.totalUserCount
+                        .chat-content-area
+                            !{content.chatTemplates}
+                        .row.type-message
+                            .col-md-12
+                                form
+                                    .input-group
+                                        input#chatMessageInput.form-control(type='text', maxlength="250", placeholder='Enter your message here...')
+                                        .input-group-btn
+                                            button#chatMessageSendButton.btn.btn-default
+                                                i.fa.fa-send
+                    // END Chat Container
+                    #rightBot.right-bot-cont
+                        // Ads Container
+                        .ads-cont
+                            a(href="https://twitter.com/csgozap/status/917801533596684288", target="_blank")
+                                img.img-responsive.ads-img(src='images/giveaway2.jpg', alt='')
+                        // END Ads Container
+                        // Social Media Links
+                        .row.social-media-tray
+                            .block.tw-bg
+                                a(href='https://twitter.com/csgozap', target="_blank")
+                                    i.fa.fa-twitter(aria-hidden='true')
+                            .block.tw-bg
+                                a(href='https://facebook.com/csgozap', target="_blank")
+                                    i.fa.fa-facebook(aria-hidden='true')
+                            .block.fb-bg
+                                a(href='https://goo.gl/forms/FgnEghjKwRih8ZIB2', target="_blank")
+                                    i.fa.fa-money(aria-hidden='true')
+                            .block.ig-bg
+                                a(href='https://goo.gl/forms/LJ0DqJE2PelNEDX12', target="_blank")
+                                    i.fa.fa-question(aria-hidden='true')
+                        // END Social Media Links
+                // END Right Panel
+
+        // END Main Container
+        // Footer
+        footer#footer.footer
+            .container-fluid
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        a(href='/toc')
+                            h2 Terms of conditions
+                        h3 CSGOZAP.com © Copyrights 2017 All rights reserved
+        // END Footer
+        // Modal Chat Mobile
+        #myModal.modal.hidden-md.hidden-lg
+            // Modal content
+            .modal-content
+                .modal-body
+                    span.close ×
+                    .chat
+                        p
+                            | Online User:
+                            span.totalUserCount
+                        .chat-content-area
+                            .block
+                                .col-xs-3.col-sm-2.col-md-2.col-lg-2
+                                    img.img-responsive.linkcss1(src='images/thumbnail.jpg', alt='')
+                                .col-xs-9.col-sm-9.col-md-9.col-lg-9
+                                    h4 Senpai Kimochi
+                                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                                    .text-main-content
+                                        | the text message content goes here
+                        .row.type-message
+                            .col-xs-9.col-sm-9.col-md-9.col-lg-9
+                                .block
+                                    input.form-control(type='text', autofocus='', placeholder='type your message')
+                                    hr
+                            .col-xs-3.col-sm-3.col-md-3.col-lg-3
+                                .btn.btn-default Send
+        // END Modal Chat Mobile
+
+        //#joinCoinflipModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='Join Coinflip', aria-hidden='true')
+            .modal-content
+                .modal-header
+                    p Test
+                .modal-body
+                    p Test
+                .modal-footer
+                    p Test
+
+        //#viewCoinflipModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='Join Coinflip', aria-hidden='true')
+            .modal-content
+                .modal-header
+                    p Test
+                .modal-body
+                    p Test
+                .modal-footer
+                    p Test
+
+        #setTradeurlModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='Set Tradeurl', aria-hidden='true')
+            .modal-content
+                .modal-header(style="color:black")
+                    p SetTradeurl
+                .modal-body(style="color:black")
+                    input#setTradeurlValue(type="text",placeholder="Insert your tradeurl here")
+                    button#setTradeurlButton.btn.btn-default
+                        | Set Tradeurl
+
+        //#createCoinflipModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='Join Coinflip', aria-hidden='true')
+            .modal-content
+                .modal-header
+                    p Test
+                .modal-body
+                    p Test
+                .modal-footer
+                    p Test
+
+        // Popup Content
+        #create-coinflip-popup.container.coinflip-popup.magni-popup.mfp-with-anim.mfp-hide
+            .row
+                .col-md-12(style="text-align:center")
+                    h3.popup-title Create a Coinflip Game
+
+        // END Popup Content
+        // Join Popup Content
+        #join-coinflip-popup.container.coinflip-popup.magni-popup.mfp-with-anim.mfp-hide
+            .row
+                .col-md-12(style="text-align:center")
+                    h3.popup-title Join in a Coinflip Game
+
+        // END Join Popup Content
+
+        // View Popup Content
+        #view-coinflip-popup.container.view-popup.magni-popup.mfp-with-anim.mfp-hide
+            .row.nm.player-info
+                .col-xs-4.t-player
+                    img.img-responsive(src='https://d3iw72m71ie81c.cloudfront.net/female-45.jpg', alt='')
+                    p.pull-left $1095.50
+                .col-xs-4.view-coinflip
+                    img.img-responsive.t-img(src='images/coin-t.png', alt='')
+                    .col-xs-12.np
+                        p Hash: 91e00b48cf5ddb3ac295491190318d4a
+                        p Percentage: 59.77706207422937%
+                        p Secret: oLZUAU1S
+                .col-xs-4.ct-player
+                    img.img-responsive(src='https://d3iw72m71ie81c.cloudfront.net/female-8.jpg', alt='')
+                    p.pull-right $840.13
+            .row.nm.player-bet-info
+                .col-xs-6.t-player-info
+                    p.pull-left 7 Items
+                    p.pull-right.win-percentage 51.5385%
+                .col-xs-6.ct-player-info
+                    p.pull-right 12 Items
+                    p.pull-left.win-percentage 48.4615%
+            .row.nm.player-bet-items
+                .col-xs-6.bet-items-cont.np
+                    .col-md-6.bet-item-info
+                        p.item-name Tec-9 | Isaac
+                        p.item-condition Factory New
+                        p.item-price $58.40
+                    .col-md-6.bet-item-pic
+                        img.img-responsive(src='https://steamcommunity-a.akamaihd.net/economy/image/class/578080/1936150557/300fx250f', alt='')
+                .col-xs-6.bet-items-cont.np
+                    .col-md-6.bet-item-info
+                        p.item-name XM1014 | Tranquility
+                        p.item-condition Field Tested
+                        p.item-price $13.97
+                    .col-md-6.bet-item-pic
+                        img.img-responsive(src='https://steamcommunity-a.akamaihd.net/economy/image/class/578080/1936150557/300fx250f', alt='')
+            .row.nm.player-bet-items
+                .col-xs-6.bet-items-cont.np
+                    .col-md-6.bet-item-info
+                        p.item-name Tec-9 | Isaac
+                        p.item-condition Factory New
+                        p.item-price $58.40
+                    .col-md-6.bet-item-pic
+                        img.img-responsive(src='https://steamcommunity-a.akamaihd.net/economy/image/class/578080/1936150557/300fx250f', alt='')
+                .col-xs-6.bet-items-cont.np
+                    .col-md-6.bet-item-info
+                        p.item-name XM1014 | Tranquility
+                        p.item-condition Field Tested
+                        p.item-price $13.97
+                    .col-md-6.bet-item-pic
+                        img.img-responsive(src='https://steamcommunity-a.akamaihd.net/economy/image/class/578080/1936150557/300fx250f', alt='')
+            .row.nm.player-bet-items
+                .col-xs-6.bet-items-cont.np
+                    .col-md-6.bet-item-info
+                        p.item-name Tec-9 | Isaac
+                        p.item-condition Factory New
+                        p.item-price $58.40
+                    .col-md-6.bet-item-pic
+                        img.img-responsive(src='https://steamcommunity-a.akamaihd.net/economy/image/class/578080/1936150557/300fx250f', alt='')
+                .col-xs-6.bet-items-cont.np
+                    .col-md-6.bet-item-info
+                        p.item-name XM1014 | Tranquility
+                        p.item-condition Field Tested
+                        p.item-price $13.97
+                    .col-md-6.bet-item-pic
+                        img.img-responsive(src='https://steamcommunity-a.akamaihd.net/economy/image/class/578080/1936150557/300fx250f', alt='')
+            .row.nm.player-bet-items
+                .col-xs-6.bet-items-cont.np
+                    .col-md-6.bet-item-info
+                        p.item-name Tec-9 | Isaac
+                        p.item-condition Factory New
+                        p.item-price $58.40
+                    .col-md-6.bet-item-pic
+                        img.img-responsive(src='https://steamcommunity-a.akamaihd.net/economy/image/class/578080/1936150557/300fx250f', alt='')
+                .col-xs-6.bet-items-cont.np
+                    .col-md-6.bet-item-info
+                        p.item-name Tec-9 | Isaac
+                        p.item-condition Factory New
+                        p.item-price $58.40
+                    .col-md-6.bet-item-pic
+                        img.img-responsive(src='https://steamcommunity-a.akamaihd.net/economy/image/class/578080/1936150557/300fx250f', alt='')
+        // END View Popup Content
+
+
+
+        // More Items Modal Mobile
+        #show-mobile.mobile-list-pic.hidden-sm.hidden-md.hidden-lg(style='display:none')
+            i.fa.fa-times.pull-right(onclick='closemobile()', aria-hidden='true')
+            br
+            br
+            .row
+                .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                    img.img-responsive.main-pic-thumbnail1(src='images/thumbnail.jpg', alt='')
+                .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                    img.img-responsive.main-pic-thumbnail1(src='images/thumbnail.jpg', alt='')
+                .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                    img.img-responsive.main-pic-thumbnail1(src='images/thumbnail.jpg', alt='')
+                .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                    img.img-responsive.main-pic-thumbnail1(src='images/thumbnail.jpg', alt='')
+                .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                    img.img-responsive.main-pic-thumbnail1(src='images/thumbnail.jpg', alt='')
+        // END More Items Modal Mobile
+        // Desktop Modal
+        #show-desktop.desktop-list-pic.hidden-xs(style='display:none')
+            i.fa.fa-times.pull-right(onclick='closedesktop()')
+            br
+            br
+            .row
+                .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                    img.img-responsive.main-pic-thumbnail1(src='images/thumbnail.jpg', alt='')
+                .col-xs-4.col-sm-4.col-md-4.col-lg-4
+                    img.img-responsive.main-pic-thumbnail1(src='images/thumbnail.jpg', alt='')
+        // END Desktop Modal
+        // JS Files
+        script(type="text/javascript").
+            function giveClientsideArr() {
+                var arr = !{clientsideArr};
+                return arr;
+            }
+        script(src='js/HackTimer.min.js')
+        script(src="/socket.io/socket.io.js")
+        script(src='js/jquery.min.js')
+        script(src='js/csgozap-magnificpopup.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+        script(src='js/custom.js')
+

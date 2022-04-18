@@ -1,0 +1,58 @@
+var mysql = require("mysql");
+const express = require('express')
+const app = express()
+const port = 7779
+
+const connection = mysql.createConnection({
+    host: "csgozap.com",
+    user: "secondQuery",
+    password: '123peter123peter123',
+    socketPath: '/var/run/mysqld/mysqld.sock',
+    database: "main",
+    charset: "utf8_general_ci"
+});
+
+app.get('/', (request, response) => {
+    response.json({
+        you: "suck"
+    })
+})
+
+app.get('/cf', (request, response) => {
+    connection.query("select * from coinflip",[],function (err,res) {
+
+        if(err) {
+            console.log(err)
+        }
+
+        var totalVal = 0;
+        var cfAmount = 0;
+        res.forEach(function (val,ind) {
+            if(!isNaN(parseFloat(val["value"]))) {
+                totalVal += parseFloat(val["value"])
+            }
+            if(!isNaN(parseFloat(val["valuev2"]))) {
+                totalVal += parseFloat(val["valuev2"])
+            }
+            if(val["finished"] == 1) {
+                cfAmount++;
+            }
+        })
+
+        var averageValue = totalVal / (res.length * 2)
+
+        response.json({
+            totalValue: totalVal.toFixed(2),
+            averageValue: averageValue.toFixed(2),
+            amountCoinflipsPlayed: cfAmount
+        })
+    })
+})
+
+app.listen(port, (err) => {
+    if (err) {
+        return console.log('dat klappt ned', err)
+    }
+
+    console.log(`port: ${port}`)
+})

@@ -1,0 +1,87 @@
+doctype html
+html
+    head
+        // Global Site Tag (gtag.js) - Google Analytics
+        script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-107840577-1')
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-107840577-1');
+        title="CSGOZAP.com - FAQ"
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='keywords', content='coinflip, gambling, csgo skins, csgo, counter-strike global offensive, cs:go, csgozap, csgozap.com')
+        meta(name='description', content='CSGO Skin Coinflip! Players deposit skins in a coinflip. Afterwards a Coin will be flipped, and the winner receives the skins.')
+        meta(name='author', content='CSGOZAP')
+        meta(property='og:title', content='CSGOZAP')
+        meta(property='og:description', content='CSGO Skin Coinflip! Players deposit skins in a coinflip. Afterwards a Coin will be flipped, and the winner receives the skins.')
+        meta(property='og:url', content='https://csgozap.com')
+        meta(property='og:site_name', content='CSGOZAP')
+        link(rel='alternate', href='https://CSGOZAP.com', hreflang='en')
+        //title CSGOZAP.com - CS:GO Coinflip
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(href='/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/css/germany.css', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:200', rel='stylesheet')
+        link(rel='shortcut icon', href='img/favicon/favicon.png', type='image/x-icon')
+        link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+        link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+        link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+        link(rel='stylesheet', media='all', href='../css/custom.css?v=1.1')
+    body
+        // BEGIN WRAPPER
+        .wrapper(style='height:100%;')
+            // begin main
+            main.main
+                // begin header
+                // begin header
+                .header
+                    .header__logo(style="margin: 0 auto;")
+                        a.header__logo-link(href='/')
+                            img(src='img/logo.png', alt='CSGO ZAP')
+                // end header
+                // end header
+                .content
+                    article.terms
+                        h1.terms__title Frequently Asked Questions
+                        ul.terms__list
+                            h3.terms__list-heading I am trying to create a coinflip but my inventory is not loading, what can I do?
+                            li.terms__list-item
+                                | First, verify if your tradelink is correctly set. If the problem persists,
+                                | you can check if steam is having issues on https://steamstat.us/.
+                                | If steam has no issues, it could be us having issues. Feel free to reload the page and try again.
+                                | You can also press the "Reload Inventory" button, to manually reload the inventory all 60 seconds.
+                        ul.terms__list
+                            h3.terms__list-heading Can I be a Mod?
+                            li.terms__list-item
+                                | We do not recruit users from our website to be mods in the chat.
+                                | All mods are currently handpicked by the admins from people they know and it will continue to be that way.
+                        ul.terms__list
+                            h3.terms__list-heading I have deposited skins to create a coinflip but the game failed to create. How can I get my skins back?
+                            li.terms__list-item
+                                | You can always use the "Support" page and/or send a email to admin@csgozap.com.
+                                | We usually respond within 24 hours.
+                        ul.terms__list
+                            h3.terms__list-heading I have not received the trade offer from a coinflip I won. How can I get the trade offer?
+                            li.terms__list-item
+                                | There was either a issue sending it, with steam or 30 minutes passed and the offer got declined.
+                                | We advise to check https://steamstat.us/ before flooding our emails with unnecessary requests.
+                                | If that steam is working fine, you can always use the "Support" page and/or send a email to admin@csgozap.com.
+                                | We usually respond within 24 hours.
+                        ul.terms__list
+                            h3.terms__list-heading Why was I banned from the CSGOZAP chat?
+                            li.terms__list-item
+                                | You most likely engaged in forbidden activity such as spamming, begging for skins, distributing refferal codes,
+                                | promoting other websites or having a bad behaviour towards other users or the website itself, such as insults.
+                                | Self promotion and using the chat as a trade lounge also won't be tolerated by our mod team.
+
+            // end main
+        // END WRAPPPER
+        // BEGIN scripts
+        script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js')
+        script(type='text/javascript', src='js/app.js')
+        // END scripts
