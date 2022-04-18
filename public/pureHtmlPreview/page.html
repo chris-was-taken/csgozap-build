@@ -1,0 +1,1323 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>CSGO ZAP</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- Template Basic Images Start -->
+    <meta property="og:title" content="CSGO ZAP">
+    <meta property="og:image" content="img/logo.png">
+    <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <!-- Template Basic Images End -->
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+
+  <body>
+    <!-- BEGIN WRAPPER -->
+    <div class="wrapper">
+      <!-- begin main  -->
+      <main class="main">
+        <!-- begin header -->
+        <!-- begin header  -->
+        <div class="header">
+          <div class="header__logo"> <a href="/" class="header__logo-link">
+      <img src="img/logo.png" alt="CSGO ZAP">
+    </a> </div>
+          <div class="profile">
+            <div class="profile__avatar"><img src="img/profile-ava.png" alt="Gamer's avatar"></div> <a href="#" class="profile__open-btn">
+        
+<svg class="icon icon-chevron-down"><use xlink:href="img/sprite.svg#icon-chevron-down"></use></svg>
+
+        <nav class="profile__menu">
+          <a href="#modal-set-url" class="profile__menu-link popup-with-zoom-anim my-mfp-zoom-in">Change Tradeurl</a> <a href="#" class="profile__menu-link">Log Out</a> </nav>
+            </a>
+          </div>
+          <a href="#" id="touch-menu">
+            <div id="nav-icon1"> <span></span> <span></span> <span></span> </div>
+          </a>
+        </div>
+        <!-- end header -->
+        <!-- end header -->
+        <div class="topbar">
+          <div class="topbar__total">
+            <div class="info"> <span class="info__number">
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+4930.69</span> <span class="info__caption">Total Amount</span> </div>
+            <div class="info"> <span class="info__number">1846</span> <span class="info__caption">Total items</span> </div>
+            <div class="info"> <span class="info__number">332</span> <span class="info__caption">Total Games</span> </div>
+          </div>
+          <div class="topbar__buttons"> <a href="#" role="button" class="btn btn--transparent" id="btnToggleStats"><span>Your Stats</span>
+<svg class="icon icon-chevron-down"><use xlink:href="img/sprite.svg#icon-chevron-down"></use></svg>
+</a> <a href="#modal-history" role="button" class="btn btn--transmodal-viewparent popup-with-zoom-anim my-mfp-zoom-in  popup-with-zoom-anim my-mfp-zoom-in">View History</a> <a href="#modal-create" role="button" class="btn btn--green popup-with-zoom-anim my-mfp-zoom-in">Create Game</a>
+            <!-- popup stats -->
+            <div class="popup-stats">
+              <div class="stats-inner">
+                <div class="info"> <span class="info__number">
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+730.15</span> <span class="info__caption">Amount Played</span> </div>
+                <div class="info"> <span class="info__number">
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+6135.20</span> <span class="info__caption">Amount Won</span> </div>
+                <div class="info"> <span class="info__number">
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+332</span> <span class="info__caption">Total Games</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrap scroll-y">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="ceil-head__players">PLAYERS</th>
+                <th class="ceil-head__items">ITEMS</th>
+                <th class="ceil-head__value">TOTAL VALUE</th>
+                <th class="ceil-head__status">STATUS</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"> </div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+              
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+              <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join-game" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/player1.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2"> <img src="img/player2.png" alt="Player name"> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                  </div>
+                </td>
+                <td><span class="ceil__value">
+              
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+              <span class="ceil__value-number">4930.69</span> </span>
+                </td>
+                <td>
+                  <div class="ceil__chart">
+                    <div class="progress-pie-chart pie-chart--purple" data-percent="7">
+                      <div class="ppc-progress">
+                        <div class="ppc-progress-fill"></div>
+                      </div>
+                      <div class="ppc-percents">
+                        <div class="pcc-percents-wrapper"> <span>7s</span> </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1 ceil-unknown"> <span class="sign-question">?</span> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2"> <img src="img/profile-ava.png" alt="Player name"> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td>
+                  <div class="ceil__chart">
+                    <div class="progress-pie-chart pie-chart--rose" data-percent="63">
+                      <div class="ppc-progress">
+                        <div class="ppc-progress-fill"></div>
+                      </div>
+                      <div class="ppc-percents">
+                        <div class="pcc-percents-wrapper"> <span>63s</span> </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+              
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+              <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                  
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                  <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1 ceil-unknown"> <span class="sign-question">?</span> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2"> <img src="img/profile-ava.png" alt="Player name"> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                  
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                  <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td>
+                  <div class="ceil__chart">
+                    <div class="progress-pie-chart pie-chart--rose" data-percent="63">
+                      <div class="ppc-progress">
+                        <div class="ppc-progress-fill"></div>
+                      </div>
+                      <div class="ppc-percents">
+                        <div class="pcc-percents-wrapper"> <span>63s</span> </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                    
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                    <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                  
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                  <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                  
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                  <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                  
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                  <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                  
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                  <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                  
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                  <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/profile-ava.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2 ceil-unknown"> <span class="sign-question">?</span> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-4.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-5.png" alt="Weapon"></div> <button class="items__more">+7</button> </div>
+                </td>
+                <td><span class="ceil__value">
+                
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                <span class="ceil__value-number">1054.69</span> </span>
+                </td>
+                <td> <span class="status-open">OPEN</span></td>
+                <td>
+                  <div class="ceil__action"> <a href="#modal-join" role="button" class="btn btn--rose popup-with-zoom-anim my-mfp-zoom-in">Join</a> <a href="#modal-view" role="button" class="btn btn--purple popup-with-zoom-anim my-mfp-zoom-in">View</a> </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <!-- end main -->
+      <!-- begin sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <p class="sidebar__online">Online: <span class="online__number">367</span></p>
+        <div class="chat">
+          <!-- feed -->
+          <div class="chat__feed scroll-y">
+            <div class="chat__item">
+              <div class="chat__photo"> <img src="img/player2.png" alt="Avatar"> </div>
+              <div class="chat__message">
+                <h5 class="message__author">Yamete Onegai</h5>
+                <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <!-- new row -->
+            <div class="chat__item">
+              <div class="chat__photo"> <img src="img/player1.png" alt="Avatar"> </div>
+              <div class="chat__message">
+                <h5 class="message__author">Yamete Onegai</h5>
+                <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+              </div>
+            </div>
+            <!-- new row -->
+            <div class="chat__item">
+              <div class="chat__photo"> <img src="img/player1.png" alt="Avatar"> </div>
+              <div class="chat__message">
+                <h5 class="message__author">Yamete Onegai</h5>
+                <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+              </div>
+            </div>
+            <!-- new row -->
+            <div class="chat__item">
+              <div class="chat__photo"> <img src="img/player2.png" alt="Avatar"> </div>
+              <div class="chat__message">
+                <h5 class="message__author">Yamete Onegai</h5>
+                <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <!-- new row -->
+            <div class="chat__item">
+              <div class="chat__photo"> <img src="img/player1.png" alt="Avatar"> </div>
+              <div class="chat__message">
+                <h5 class="message__author">Yamete Onegai</h5>
+                <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+              </div>
+            </div>
+            <!-- new row -->
+            <div class="chat__item">
+              <div class="chat__photo"> <img src="img/player1.png" alt="Avatar"> </div>
+              <div class="chat__message">
+                <h5 class="message__author">Yamete Onegai</h5>
+                <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+              </div>
+            </div>
+            <!-- new row -->
+            <div class="chat__item">
+              <div class="chat__photo"> <img src="img/player2.png" alt="Avatar"> </div>
+              <div class="chat__message">
+                <h5 class="message__author">Yamete Onegai</h5>
+                <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <!-- new row -->
+            <div class="chat__item">
+              <div class="chat__photo"> <img src="img/player1.png" alt="Avatar"> </div>
+              <div class="chat__message">
+                <h5 class="message__author">Yamete Onegai</h5>
+                <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+              </div>
+            </div>
+            <!-- new row -->
+            <div class="chat__item">
+              <div class="chat__photo"> <img src="img/player1.png" alt="Avatar"> </div>
+              <div class="chat__message">
+                <h5 class="message__author">Yamete Onegai</h5>
+                <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+              </div>
+            </div>
+          </div>
+          <div class="chat__form-wrap">
+            <form class="chat__form" action="#"> <input type="text" class="chat__input"> <button class="chat__send">Send</button> </form>
+          </div>
+        </div>
+        <div class="sidebar__poster"> <img src="img/poster-gun.jpg" alt="Giveaway"> </div>
+        <!-- begin footer  -->
+        <div class="sidebar__footer">
+          <div class="footer__socials"> <a href="#" class="socials__item">
+<svg class="icon icon-facebook"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+</a> <a href="#" class="socials__item">
+<svg class="icon icon-twitter"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
+</a> </div>
+          <nav class="footer__nav"> <a href="#" class="footer__nav-link">Support</a> <a href="terms.html" class="footer__nav-link">Terms of Service</a> <a href="#" class="footer__nav-link">FAQ</a> <a href="#" class="footer__nav-link">Provably Fair</a> </nav>
+          <div class="sidebar__footer-copy">© CSGOZAP 2017. All rights reserved. </div>
+        </div>
+        <!-- end footer -->
+      </aside>
+      <!-- end sidebar -->
+      <!-- MODALS -->
+      <!-- start history popup-->
+      <div id="modal-history" class="zoom-anim-dialog mfp-hide modal-popup">
+        <h3 class="modal__title">History</h3>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="ceil-head__players">PLAYERS</th>
+                <th class="ceil-head__items">ITEMS</th>
+                <th class="ceil-head__value">TOTAL VALUE</th>
+                <th class="ceil-head__winner">WINNER</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/player1.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2"> <img src="img/player2.png" alt="Player name"> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                  </div>
+                </td>
+                <td><span class="ceil__value">
+                
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                <span class="ceil__value-number">4930.69</span> </span>
+                </td>
+                <td> <span class="ceil-winner">
+                <span class="ceil-player ceil-player2">
+                  <img src="img/player2.png" alt="Player name">  
+                </span> </span>
+                </td>
+              </tr>
+              <tr class="row__data">
+                <td COLSPAN=4> <span class="ceil__data">
+                 <span class="ceil__data-value">Hash: 8743b52063cd84097a65d1633f5c74f5</span> <span class="ceil__data-value">Percentage: 49.4898451%</span> <span class="ceil__data-value">Secret:097a65d1633f5c74f5 Pew</span> </span>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/player1.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2"> <img src="img/player2.png" alt="Player name"> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                  </div>
+                </td>
+                <td><span class="ceil__value">
+                            
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                            <span class="ceil__value-number">4930.69</span> </span>
+                </td>
+                <td> <span class="ceil-winner">
+                            <span class="ceil-player ceil-player2">
+                              <img src="img/player2.png" alt="Player name">  
+                            </span> </span>
+                </td>
+              </tr>
+              <tr class="row__data">
+                <td COLSPAN=4> <span class="ceil__data">
+                             <span class="ceil__data-value">Hash: 8743b52063cd84097a65d1633f5c74f5</span> <span class="ceil__data-value">Percentage: 49.4898451%</span> <span class="ceil__data-value">Secret:097a65d1633f5c74f5 Pew</span> </span>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/player1.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2"> <img src="img/player2.png" alt="Player name"> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                  </div>
+                </td>
+                <td><span class="ceil__value">
+                                  
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                                  <span class="ceil__value-number">4930.69</span> </span>
+                </td>
+                <td> <span class="ceil-winner">
+                                  <span class="ceil-player ceil-player2">
+                                    <img src="img/player2.png" alt="Player name">  
+                                  </span> </span>
+                </td>
+              </tr>
+              <tr class="row__data">
+                <td COLSPAN=4> <span class="ceil__data">
+                                   <span class="ceil__data-value">Hash: 8743b52063cd84097a65d1633f5c74f5</span> <span class="ceil__data-value">Percentage: 49.4898451%</span> <span class="ceil__data-value">Secret:097a65d1633f5c74f5 Pew</span> </span>
+                </td>
+              </tr>
+              <!-- new row -->
+              <tr>
+                <td>
+                  <div class="ceil-players">
+                    <div class="ceil-player ceil-player1"> <img src="img/player1.png" alt="Player name"> </div> <span class="versus">vs</span>
+                    <div class="ceil-player ceil-player2"> <img src="img/player2.png" alt="Player name"> </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ceil__items">
+                    <div class="items__weapon"><img src="img/item-1.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-2.png" alt="Weapon"></div>
+                    <div class="items__weapon"><img src="img/item-3.png" alt="Weapon"></div>
+                  </div>
+                </td>
+                <td><span class="ceil__value">
+                              
+<svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>
+
+                              <span class="ceil__value-number">4930.69</span> </span>
+                </td>
+                <td> <span class="ceil-winner">
+                              <span class="ceil-player ceil-player2">
+                                <img src="img/player2.png" alt="Player name">  
+                              </span> </span>
+                </td>
+              </tr>
+              <tr class="row__data">
+                <td COLSPAN=4> <span class="ceil__data">
+                               <span class="ceil__data-value">Hash: 8743b52063cd84097a65d1633f5c74f5</span> <span class="ceil__data-value">Percentage: 49.4898451%</span> <span class="ceil__data-value">Secret:097a65d1633f5c74f5 Pew</span> </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--end history popup-->
+      <!-- start set-url popup-->
+      <div id="modal-set-url" class="zoom-anim-dialog mfp-hide modal-popup">
+        <h3 class="modal__title">Setting your Trade URL</h3>
+        <div class="set-url__content">
+          <p class="set-url__paragaph">Before your able to participate in our games you have to set your Steam trade URL first. If you have problems finding it, just click <a href="#">this</a>.</p>
+          <p class="set-url__paragaph">Be very careful setting your correct URL, you will be able to change it again later, but with a wrong URL you might not be able to receive your winnig.</p>
+          <div class="set-url__form-wrap">
+            <form class="set-url__form" action="#"> <input type="text" placeholder="Steam Trade URL" class="set-url__input"> <span class="set-url__tick">
+<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+</span> <button class="set-url__submit" type="submit">Set Trade URL</button> </form>
+          </div>
+        </div>
+      </div>
+      <!--end set-url popup-->
+      <!-- start join popup-->
+      <div id="modal-join" class="zoom-anim-dialog mfp-hide modal-popup">
+        <h3 class="modal__title">Hash: 8743b52063cd84097a65d1633f5c74f5</h3>
+        <div class="game">
+          <div class="game__players">
+            <!-- player1 -->
+            <div class="game__player game__player1">
+              <h4 class="game__player-name">NumLock457</h4>
+              <div class="game__player-photo"> <img src="img/game__player1.jpg" alt="Player"> <span class="game__coin game__coin1"><img src="img/game__coin1.png" alt="Coin"></span> </div>
+              <p class="game__value"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span> </p>
+              <div class="game__stats"> <span class="game__items">10 Items</span> <span class="game__percent">51.32%</span> </div>
+            </div>
+            <!-- player unknown -->
+            <div class="game__player game__player--unknown">
+              <!-- <h4 class="game__player-name">P4USEBRE4K </h4> -->
+              <div class="game__player-photo"> <span>?</span> </div>
+              <p class="game__value"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>101.62/132.74</span> </p>
+            </div>
+          </div>
+          <!-- game weapons -->
+          <div class="game__weapons ">
+            <div class="game__weapon1 scroll-y">
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="game__btn-wrap"> <a href="#" role="button" class="btn game__join-btn">Join</a> </div>
+          </div>
+        </div>
+      </div>
+      <!--end join popup-->
+      <!-- start view popup-->
+      <div id="modal-view" class="zoom-anim-dialog mfp-hide modal-popup">
+        <h3 class="modal__title">Hash: 8743b52063cd84097a65d1633f5c74f5</h3>
+        <div class="game">
+          <div class="game__players">
+            <!-- player1 -->
+            <div class="game__player game__player1">
+              <h4 class="game__player-name">NumLock457</h4>
+              <div class="game__player-photo"> <img src="img/game__player1.jpg" alt="Player"> <span class="game__coin game__coin1"><img src="img/game__coin1.png" alt="Coin"></span> </div>
+              <p class="game__value"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span> </p>
+              <div class="game__stats"> <span class="game__items">10 Items</span> <span class="game__percent">51.32%</span> </div>
+            </div>
+            <!-- sign vs -->
+            <div class="game__sign-vs"> <img src="img/game__vs.png" alt="versus sign"> </div>
+            <!-- player2 -->
+            <div class="game__player game__player2">
+              <h4 class="game__player-name">P4USEBRE4K </h4>
+              <div class="game__player-photo"> <img src="img/game__player2.jpg" alt="Player"> <span class="game__coin game__coin2"><img src="img/game__coin2.png" alt="Coin"></span> </div>
+              <p class="game__value"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span> </p>
+              <div class="game__stats"> <span class="game__items">48.62% 	                  </span> <span class="game__percent">5 Items</span> </div>
+            </div>
+          </div>
+          <!-- game weapons -->
+          <div class="game__weapons">
+            <div class="game__weapon1 scroll-y">
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="game__weapon2 scroll-y">
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+              <!-- new item -->
+              <div class="weapons__item">
+                <div class="weapons__photo"> <img src="img/game__weapon.png" alt="Gun"> </div>
+                <div class="weapons__desc">
+                  <p class="weapons__desc-title">AWP | Dragon Lore</p>
+                  <p>Factory New</p>
+                  <p class="weapons__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end view popup-->
+      <!-- start create-game popup-->
+      <div id="modal-create" class="modal-create zoom-anim-dialog mfp-hide modal-popup">
+        <h3 class="modal__title">Create a Coinflip Game </h3>
+        <div class="create-block">
+          <div class="create__stats">
+            <div class="stats__item stats__value"> <span>Value:</span> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span> </div>
+            <div class="stats__item"> Selected: 1/15</div>
+            <div class="stats__item stats__side"> <span>Your Side:</span> <img class="side__pic" src="img/coin-red.png" alt="Side 1"> <img class="side__pic" src="img/coin-purple.png" alt="Side 2"> </div>
+            <div class="stats__item create__btn-wrap"> <a href="#" class="btn create__btn">Create Game</a> </div>
+          </div>
+          <!-- grid -->
+          <div class="create__grid scroll-y">
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"><a href="#">StatTrak™</a> Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item grid__item--grey">
+              <div class="item__pic"><img src="img/create__pic4.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item grid__item--purple"> <span class="item__icon-act">
+            
+<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+        </span>
+              <div class="item__pic"><img src="img/create__pic3.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item grid__item--rose"> <span class="item__icon-act">
+              
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+          </span>
+              <div class="item__pic"><img src="img/create__pic6.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic4.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic5.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic4.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic3.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic4.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic7.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic1.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic7.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic1.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic7.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item">
+              <div class="item__pic"><img src="img/create__pic1.png" alt="Thing"></div>
+              <p class="item__desc">Sealed Graffiti Jump Shot Jungle Green</p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+          </div>
+          <div class="create__secret">Secret : 242395z8hawrUTBu237U</div>
+        </div>
+      </div>
+      <!--end create-game popup-->
+      <!-- start join-game popup-->
+      <div id="modal-join-game" class="modal-create zoom-anim-dialog mfp-hide modal-popup">
+        <h3 class="modal__title">Create a Coinflip Game </h3>
+        <div class="create-block">
+          <div class="create__stats">
+            <div class="stats__item stats__value"> <span>Value:</span> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>105.39</span> <span class="value__sup">-43.23</span> </div>
+            <div class="stats__item"> Selected: 1/15</div>
+            <div class="stats__item stats__value"> <span>Needed Value:</span> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>102.43</span> <span>&nbsp-&nbsp</span> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg>              <span>112.32</span> </div>
+            <div class="stats__item create__btn-wrap"> <a href="#" class="btn create__btn create__btn--grey">Refresh Inventory</a> </div>
+            <div class="stats__item create__btn-wrap"> <a href="#" class="btn create__btn">Join Game</a> </div>
+          </div>
+          <!-- grid -->
+          <div class="create__grid scroll-y">
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"><a href="#">StatTrak™</a> <span>Karambit</span> <span>Damascus Steel</span></p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item grid__item--grey"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item grid__item--purple"> <span class="item__sign-ww">ww</span> <span class="item__icon-act">
+            
+<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+        </span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item grid__item--rose"> <span class="item__sign-ww">ww</span> <span class="item__icon-act">
+              
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+          </span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+            <!-- new item -->
+            <div class="grid__item"> <span class="item__sign-ww">ww</span>
+              <div class="item__pic"><img src="img/create__pic2.png" alt="Thing"></div>
+              <p class="item__desc"> <span>Karambit</span> <span>Damascus Steel</span> </p>
+              <div class="item__price"> <svg class="icon icon-amount"><use xlink:href="img/sprite.svg#icon-amount"></use></svg> <span>7.05</span></div>
+            </div>
+          </div>
+          <div class="create__secret">Secret : 242395z8hawrUTBu237U</div>
+        </div>
+      </div>
+      <!--end join-game popup-->
+    </div>
+    <!-- END WRAPPPER -->
+    <!-- BEGIN scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>
