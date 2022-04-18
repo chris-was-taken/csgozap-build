@@ -9,7 +9,7 @@ Started development at the start of my software developer career, launched at th
 This repository is just for nostalgia factor for me.
 
 - The code isnt very clean
-- The project strucutre is messy
+- The project structure is messy
 - It will not work since its based on alot of outdated modules and server data infos which do not exist anymore since years
 
 Cheers 🤙
